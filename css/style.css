@@ -29,6 +29,15 @@ h1
 	text-shadow: 5px 5px #868684;
 }
 
+h2
+{
+    font-family: sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
+
 #choice
 {
     margin-top: 30px;
@@ -72,13 +81,51 @@ footer a:hover
     text-decoration: underline;
 }
 
-h2
+.message1
+{
+    margin-top: 30px;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color:  #868684;
+}
+
+.message2
 {
     font-family: sans-serif;
-    font-size: 1.8em;
+    font-size: 1.3em;
     font-weight: bold;
-    text-shadow: 0px 0px 10px black;
-    color: white;
+    color: #ef6d00;
+}
+
+.message3
+{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: green;
+}
+
+.message4
+{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: red;
+}
+
+.result
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    vertical-align: top;
+}
+
+.vertical
+{
+    font-weight: bold;
+    vertical-align: top;
 }
 
 .wiki
@@ -113,7 +160,36 @@ strong
 
 .map
 {
+    margin-bottom: 30px;
     border: ridge 5px #868684;
     border-radius: 5px;
     box-shadow: 10px 10px 5px grey;
 }
+
+.list_choice
+{
+    font-family: sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: black;
+}
+
+#button
+{
+    padding: 5px 10px 5px 10px;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: black;
+    border: 2px solid #868684;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+#button:hover
+{
+    color: #868684;
+    background-color: white;
+}
+

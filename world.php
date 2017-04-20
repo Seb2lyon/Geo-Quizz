@@ -14,7 +14,7 @@
 
 	<section>
 		<h2>En construction</h2>
-		<p><a href="index.php">Retour à l'accueil</a></p>
+		<p id="choice"><a href="index.php">Retour à l'accueil</a></p>
 	</section>
 
 	<?php include('includes/footer.php'); ?>

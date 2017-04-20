@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['player']))
+{
+	unset($_SESSION['player']);
+	session_destroy();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
