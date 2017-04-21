@@ -84,36 +84,57 @@ class Department
 
 	public function setDept_number($dept_number)
 	{
-		$this->_dept_number = $dept_number;
+		if(is_string($dept_number))
+		{
+			$this->_dept_number = $dept_number;
+		}
 	}
 
 	public function setDept_name($dept_name)
 	{
-		$this->_dept_name = $dept_name;
+		if(is_string($dept_name))
+		{
+			$this->_dept_name = $dept_name;
+		}
 	}
 
 	public function setMain_town($main_town)
 	{
-		$this->_main_town = $main_town;
+		if(is_string($main_town))
+		{
+			$this->_main_town = $main_town;
+		}
 	}
 
 	public function setRegion($region)
 	{
-		$this->_region = $region;
+		if(is_string($region))
+		{
+			$this->_region = $region;
+		}
 	}
 
 	public function setArea($area)
 	{
-		$this->_area = $area;
+		if(is_string($area))
+		{
+			$this->_area = $area;
+		}
 	}
 
 	public function setPicture($picture)
 	{
-		$this->_picture = $picture;
+		if(is_string($picture))
+		{
+			$this->_picture = $picture;
+		}
 	}
 
 	public function setWiki($wiki)
 	{
-		$this->_wiki = $wiki;
+		if(is_string($wiki))
+		{
+			$this->_wiki = $wiki;
+		}
 	}
 }

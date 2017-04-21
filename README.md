@@ -10,8 +10,12 @@ You can select two different databases :
 
 All the datas are updated (update : april 2017).
 
+For each entity (French department or country), I add a link to consult the Wikipedia article about this area.
+
 This script is still under progress, but I will be very happy to receive your contributions and advices :)
 
-Once this application will be quite usable, I will upload it on the Internet ;)
+For the moment, this application is usable only for the French departments part... The world part is still under construction (big work to do) and will be ready soon (I hope) :X
+
+But you can already test this web app online at : http://seb2lyon.site11.com/geo-quizz
 
 See you soon on the road again :D

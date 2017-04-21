@@ -11,11 +11,11 @@ session_start();
 
 if(!isset($_SESSION['player']))
 {
-	$_SESSION['player'] = "Test"; // Création de l'objet player avec hydratation à 0 des scores gagnés et perdus
+	$user = new Player();
+	$_SESSION['player'] = $user;
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -37,14 +37,7 @@ if(!isset($_SESSION['player']))
 
 	if(!isset($_SESSION['department']) OR !isset($_SESSION['answer']))
 	{
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=seb2lyon;charset=utf8', 'root', '');
-		}
-		catch(Exception $e)
-		{
-			die('Erreur : ' . $e->getMessage());
-		}
+		include('includes/connect_bd.php');
 
 		$manager = new Manager($bdd);
 
@@ -139,7 +132,7 @@ if(!isset($_SESSION['player']))
 
 		?>
 
-		<form action="" method="post">
+		<form action="france.php" method="post">
 
 			<select class="list_choice" name="choice">
 
@@ -173,27 +166,31 @@ if(!isset($_SESSION['player']))
 		{
 			$answer = $_SESSION['answer'];
 
+			$_SESSION['player']->add('shots');
+
 			if($_POST['choice'] == $_SESSION['department']->$answer())
 			{
+				$_SESSION['player']->add('win');
 				echo '<p class="message3">Bonne réponse</p>';
 			}
 			else
 			{
+				$_SESSION['player']->add('loose');
 				echo '<p class="message4">Mauvaise réponse</p>';
 			}
 
-			// Calcul des bonnes et mauvaises réponses puis insertion dans l'objet player passé en variable de session
-
 			echo '<div class="result">';
-			echo '<p class="list"><img src="images/good.png" alt="Bonne(s) réponse(s)"><strong class="vertical"> = 30</strong></p>';
-			echo '<p class="list"><img src="images/bad.png" alt="Mauvaise(s) réponse(s)"><strong class="vertical"> = 20</strong></p>';
-			echo '<p class="list">Taux de bonnes réponses : <strong class="vertical">20 %</strong></p>';
+			echo '<p class="list"><img src="images/good.png" alt="Bonne(s) réponse(s)"><strong class="vertical"> = ' . $_SESSION['player']->win() . '</strong></p>';
+			echo '<p class="list"><img src="images/bad.png" alt="Mauvaise(s) réponse(s)"><strong class="vertical"> = ' . $_SESSION['player']->loose() . '</strong></p>';
+			$percent = ($_SESSION['player']->win() * 100) / $_SESSION['player']->shots();
+			$percent = (int) $percent;
+			echo '<p class="list">Taux de bonnes réponses : <strong class="vertical">' . $percent . ' %</strong></p>';
 			echo '</div>';
 
 			?>
 
 			<h2><?php echo htmlspecialchars($_SESSION['department']->dept_name()) . ' (' . htmlspecialchars($_SESSION['department']->dept_number()) . ')'; ?></h2>
-			<p class="wiki"><a href="<?php echo $_SESSION['department']->wiki(); ?>">Lien Wikipédia</a></p>
+			<p class="wiki"><a href="<?php echo $_SESSION['department']->wiki(); ?>" target="_blank">Lien Wikipédia</a></p>
 			<p class="list">
 			<strong>Superficie : </strong><?php echo htmlspecialchars($_SESSION['department']->area()) . ' km<sup>2</sup>'; ?>
 			<br />
