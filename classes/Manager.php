@@ -26,9 +26,21 @@ class Manager
 		return $datas;
 	}
 
-	public function list($title)
+	public function country($id)
 	{
-		$request = $this->_bdd->query('SELECT DISTINCT ' . $title . ' FROM france ORDER BY ' . $title);
+		$request = $this->_bdd->prepare('SELECT * FROM world WHERE id = :id');
+		$request->execute(array(':id' => $id));
+
+		$datas = $request->fetch();
+
+		$request->closeCursor();
+
+		return $datas;
+	}
+
+	public function list($title, $game)
+	{
+		$request = $this->_bdd->query('SELECT DISTINCT ' . $title . ' FROM ' . $game . ' ORDER BY ' . $title);
 
 		while($extract = $request->fetch())
 		{

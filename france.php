@@ -138,7 +138,7 @@ if(!isset($_SESSION['player']))
 
 			<?php
 
-				$choice_answer = $manager->list($answer);
+				$choice_answer = $manager->list($answer, 'france');
 
 				foreach ($choice_answer as $key => $value) 
 				{

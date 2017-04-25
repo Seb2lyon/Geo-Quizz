@@ -197,3 +197,9 @@ footer a:hover
     border-radius: 5px;
     box-shadow: 10px 10px 5px grey;
 }
+
+.flag
+{
+    margin-bottom: 25px;
+    border: solid 1px black;
+}
