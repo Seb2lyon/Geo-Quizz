@@ -41,7 +41,7 @@ if(!isset($_SESSION['player']))
 
 		$manager = new Manager($bdd);
 
-		$mystery_id = rand(1, 197); // Nombre de pays
+		$mystery_id = rand(1, 197);
 
 		$country_datas = $manager->country($mystery_id);
 
@@ -49,68 +49,56 @@ if(!isset($_SESSION['player']))
 
 		$_SESSION['country'] = $country_mystery;
 
-		$question_id = rand(1, 10); // Nombre de questions
+		$question_id = rand(1, 8);
 
-		switch ($question_id)  // Liste des questions
+		switch ($question_id)
 		{
 			case 1:
-				$answer = 'dept_name';
-				$show = 'picture';
-				$message = "Quel est le NOM de ce département ?";
+				$answer = 'continent';
+				$show = 'country_name';
+				$message = "Sur quel CONTINENT se situe ce pays ?";
 				break;
 
 			case 2:
-				$answer = 'dept_number';
-				$show = 'picture';
-				$message = "Quel est le NUMÉRO de ce département ?";
+				$answer = 'main_town';
+				$show = 'country_name';
+				$message = "Quelle est la CAPITALE de ce pays ?";
 				break;
 
 			case 3:
-				$answer = 'dept_number';
-				$show = 'dept_name';
-				$message = "Quel est le NUMÉRO de ce département ?";
+				$answer = 'country_name';
+				$show = 'map';
+				$message = "Quel est le NOM de ce pays ?";
 				break;
 
 			case 4:
 				$answer = 'main_town';
-				$show = 'dept_name';
-				$message = "Quel est le CHEF-LIEU de ce département ?";
+				$show = 'map';
+				$message = "Quel est la CAPITALE de ce pays ?";
 				break;
 
 			case 5:
-				$answer = 'region';
-				$show = 'dept_name';
-				$message = "Dans quelle RÉGION se situe ce département ?";
+				$answer = 'continent';
+				$show = 'map';
+				$message = "Sur quel CONTINENT se situe ce pays ?";
 				break;
 
 			case 6:
-				$answer = 'dept_name';
-				$show = 'dept_number';
-				$message = "Quel est le NOM de ce département ?";
+				$answer = 'country_name';
+				$show = 'flag';
+				$message = "Quel est le NOM de ce pays ?";
 				break;
 
 			case 7:
 				$answer = 'main_town';
-				$show = 'dept_number';
-				$message = "Quel est le CHEF-LIEU de ce département ?";
+				$show = 'flag';
+				$message = "Quel est la CAPITALE de ce pays ?";
 				break;
 
 			case 8:
-				$answer = 'region';
-				$show = 'dept_number';
-				$message = "Dans quelle RÉGION se situe ce département ?";
-				break;
-
-			case 9:
-				$answer = 'dept_name';
+				$answer = 'country_name';
 				$show = 'main_town';
-				$message = "De quel DÉPARTEMENT cette ville est-elle le Chef-lieu ?";
-				break;
-
-			case 10:
-				$answer = 'dept_number';
-				$show = 'main_town';
-				$message = "De quel DÉPARTEMENT cette ville est-elle le Chef-lieu ?";
+				$message = "De quel PAYS cette ville est-elle la capitale ?";
 				break;
 			
 			default:
