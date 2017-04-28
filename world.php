@@ -182,7 +182,7 @@ if(!isset($_SESSION['player']))
 			?>
 
 			<h2><?php echo htmlspecialchars($_SESSION['country']->country_name()); ?></h2>
-			<p class="wiki"><img class="flag" src="images/<?php echo htmlspecialchars($_SESSION['country']->country_flag()); ?>" alt="Drapeau <?php echo htmlspecialchars($_SESSION['country']->country_name()); ?>" />
+			<p class="wiki"><img class="flag" src="images/<?php echo htmlspecialchars($_SESSION['country']->flag()); ?>" alt="Drapeau <?php echo htmlspecialchars($_SESSION['country']->country_name()); ?>" />
 			<br />
 			<p class="wiki"><a href="<?php echo $_SESSION['country']->wiki(); ?>" target="_blank">Lien Wikipédia</a></p>
 			<p class="list">

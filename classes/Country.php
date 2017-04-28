@@ -98,7 +98,7 @@ class Country
 		}
 	}
 
-	public function setRegion($continent)
+	public function setContinent($continent)
 	{
 		if(is_string($continent))
 		{
