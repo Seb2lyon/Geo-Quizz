@@ -74,7 +74,7 @@ if(!isset($_SESSION['player']))
 			case 4:
 				$answer = 'main_town';
 				$show = 'map';
-				$message = "Quel est la CAPITALE de ce pays ?";
+				$message = "Quelle est la CAPITALE de ce pays ?";
 				break;
 
 			case 5:
@@ -92,7 +92,7 @@ if(!isset($_SESSION['player']))
 			case 7:
 				$answer = 'main_town';
 				$show = 'flag';
-				$message = "Quel est la CAPITALE de ce pays ?";
+				$message = "Quelle est la CAPITALE de ce pays ?";
 				break;
 
 			case 8:
@@ -184,7 +184,7 @@ if(!isset($_SESSION['player']))
 			<h2><?php echo htmlspecialchars($_SESSION['country']->country_name()); ?></h2>
 			<p class="wiki"><img class="flag" src="images/<?php echo htmlspecialchars($_SESSION['country']->flag()); ?>" alt="Drapeau <?php echo htmlspecialchars($_SESSION['country']->country_name()); ?>" />
 			<br />
-			<p class="wiki"><a href="<?php echo $_SESSION['country']->wiki(); ?>" target="_blank">Lien Wikipédia</a></p>
+			<a href="<?php echo $_SESSION['country']->wiki(); ?>" target="_blank">Lien Wikipédia</a></p>
 			<p class="list">
 			<strong>Superficie : </strong><?php echo htmlspecialchars($_SESSION['country']->area()) . ' km<sup>2</sup>'; ?>
 			<br />
