@@ -14,7 +14,7 @@ For each entity (French department or country), I add a link to consult the Wiki
 
 This script is still under progress, but I will be very happy to receive your contributions and advices :)
 
-For the moment, this application is usable only for the French departments part... The world part is still under construction (big work to do) and will be ready soon (I hope) :X
+For the moment, this application is usable only for the French departments part... The world part is on debugging time ;)
 
 But you can already test this web app online at : http://seb2lyon.site11.com/geo-quizz
 
