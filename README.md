@@ -12,10 +12,8 @@ All the datas are updated (update : april 2017).
 
 For each entity (French department or country), I add a link to consult the Wikipedia article about this area.
 
-This script is still under progress, but I will be very happy to receive your contributions and advices :)
+This script is finished, but I will be very happy to receive your contributions and advices :)
 
-For the moment, this application is usable only for the French departments part... The world part is on debugging time ;)
-
-But you can already test this web app online at : http://seb2lyon.site11.com/geo-quizz
+You can access to this web app at : http://seb2lyon.site11.com/geo-quizz
 
 See you soon on the road again :D

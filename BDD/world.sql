@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 02 Mai 2017 à 14:57
+-- Généré le :  Mer 03 Mai 2017 à 06:15
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -178,7 +178,7 @@ INSERT INTO `world` (`id`, `country_name`, `main_town`, `continent`, `area`, `ma
 (134, 'Ouganda', 'Kampala', 'Afrique', '241 550', '134c.png', '134.png', 'https://fr.wikipedia.org/wiki/Ouganda'),
 (135, 'Ouzbékistan', 'Tachkent', 'Asie', '447 400', '135c.png', '135.png', 'https://fr.wikipedia.org/wiki/Ouzbékistan'),
 (136, 'Pakistan', 'Islamabad', 'Asie', '796 095', '136c.png', '136.png', 'https://fr.wikipedia.org/wiki/Pakistan'),
-(137, 'Palaos', 'Melekeok,', 'Océanie', '459', '137c.png', '137.png', 'https://fr.wikipedia.org/wiki/Palaos'),
+(137, 'Palaos', 'Melekeok', 'Océanie', '459', '137c.png', '137.png', 'https://fr.wikipedia.org/wiki/Palaos'),
 (138, 'Palestine', 'Jérusalem-Est', 'Asie', '6 020', '138c.png', '138.png', 'https://fr.wikipedia.org/wiki/Palestine_(État)'),
 (139, 'Panama', 'Panama', 'Amérique', '75 417', '139c.png', '139.png', 'https://fr.wikipedia.org/wiki/Panama'),
 (140, 'Papouasie-Nouvelle-Guinée', 'Port Moresby', 'Océanie', '462 840', '140c.png', '140.png', 'https://fr.wikipedia.org/wiki/Papouasie-Nouvelle-Guinée'),
