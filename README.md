@@ -14,6 +14,6 @@ For each entity (French department or country), I add a link to consult the Wiki
 
 This script is finished, but I will be very happy to receive your contributions and advices :)
 
-You can access to this web app at : http://seb2lyon.site11.com/geo-quizz
+You can access to this web app at : http://seb2lyon.info.free.fr/geo-quizz/
 
 See you soon on the road again :D
