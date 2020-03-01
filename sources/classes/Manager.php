@@ -38,7 +38,7 @@ class Manager
 		return $datas;
 	}
 
-	public function list($title, $game)
+	public function lizt($title, $game)
 	{
 		$request = $this->_bdd->query('SELECT DISTINCT ' . $title . ' FROM ' . $game . ' ORDER BY ' . $title);
 
